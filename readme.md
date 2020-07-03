@@ -24,7 +24,6 @@ payload = Payload(
         ranges=Ranges()
     )
 ).to_json
-print(payload)
 
 reponse = Response(**requests.post(
     url="https://api.leboncoin.fr/finder/search",
