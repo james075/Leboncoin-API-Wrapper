@@ -1,4 +1,8 @@
-# LeboncoinApiWraper
+# Leboncoin API Wrapper
+![Coverage Badge](coverage.svg)
+[![Build Status](https://img.shields.io/github/forks/Shinyhero36/LeboncoinApiWraper.svg)](https://github.com/Shinyhero36/LeboncoinApiWraper)
+[![Build Status](https://img.shields.io/github/stars/Shinyhero36/LeboncoinApiWraper.svg)](https://github.com/Shinyhero36/LeboncoinApiWraper)
+
 Allow easy acces to leboncoin api using python
 
 ## Installation
