@@ -1,6 +1,6 @@
 import json
 from cloudscraper import create_scraper
-
+import requests
 
 class Payload:
     def __init__(self):
@@ -72,4 +72,17 @@ class Payload:
         self._payload["filters"]["category"]["id"] = self._get_category(query)
         
     def build(self):
-        return json.dumps(self._payload)
+        r = requests.post(
+            url="https://api.leboncoin.fr/finder/search",
+            data=json.dumps(self._payload),
+            headers={
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0',
+                'Accept': '*/*',
+                'DNT': '1',
+            }
+        )
+        if r.status_code != 200:
+            raise Exception
+        data = r.json()
+        del data["ads_shippable"]
+        return data
