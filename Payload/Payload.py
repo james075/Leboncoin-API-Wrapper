@@ -84,5 +84,4 @@ class Payload:
         if r.status_code != 200:
             raise Exception
         data = r.json()
-        del data["ads_shippable"]
         return data
