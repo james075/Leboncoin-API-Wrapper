@@ -1,12 +1,15 @@
 from Payload.Payload import Payload
-from Response.Response import *
+import json
 
 
 pl = Payload()
 pl.setLimit(1)
 pl.maxPrice(200)
 pl.setDepartement("tarn")
-pl.searchFor("google home", True)
-response = Response(**pl.build())
 
-print(response.total)
+# Cherche les produits avec google home dans le titre
+pl.searchFor("google home", True)  # Mettre à false pour cherche partout ailleurs(description...)
+resultat = pl.build()
+
+with open("resultat.json", "w+") as jsonFile:
+    jsonFile.write(json.dumps(resultat))
