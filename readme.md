@@ -17,18 +17,18 @@ pip install -r requirements.txt
 
 ## Usage
 ```python
-from Payload.Payload import Payload
-from Response.Response import *
+from Leboncoin.Leboncoin import  Leboncoin as LBC
 
 
-pl = Payload()
-pl.setLimit(1)
-pl.maxPrice(200)
-pl.setDepartement("tarn")
-pl.searchFor("google home", True)
-response = Response(**pl.build())
+lbc = LBC()
+lbc.searchFor("iphone", True)
+lbc.setLimit(10)
+lbc.maxPrice(2000)
+lbc.setDepartement("tarn")
+results = lbc.execute()
 
-print(response)
+results.print()
+
 
 ```
 

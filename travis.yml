@@ -4,4 +4,4 @@ python:
 install:
   - pip install cloudscraper
 script:
-  - python test.py
+  - python example.py
