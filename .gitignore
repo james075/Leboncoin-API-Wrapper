@@ -12,6 +12,8 @@ __pycache__
 # Python build
 /*.egg-info/
 .eggs
+/build/
+/dist/
 
 # Others
 .coverage
