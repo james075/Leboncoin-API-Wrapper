@@ -1,6 +1,9 @@
 import json
-from cloudscraper import create_scraper
+import os
+#  from pathlib import Path
+
 import requests
+from cloudscraper import create_scraper
 
 
 class Results:
@@ -41,9 +44,10 @@ class Leboncoin:
             }
         }
 
-        with open("./Leboncoin/Ressources/regions.json", "r") as json_file:
+        current_path = os.path.dirname(os.path.realpath(__file__))
+        with open(current_path + "/Ressources/regions.json", "r") as json_file:
             self.region_data = json.load(json_file)
-        with open("./Leboncoin/Ressources/departements.json", "r") as json_file:
+        with open(current_path + "/Ressources/departements.json", "r") as json_file:
             self.dept_data = json.load(json_file)
 
     def setLimit(self, limit):
