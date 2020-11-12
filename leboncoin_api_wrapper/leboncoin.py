@@ -79,12 +79,19 @@ class Leboncoin:
     def _get_category(query):
         url = f"https://api.leboncoin.fr/api/parrot/v1/complete?q={query.replace(' ', '%20')}"
         anti_captcha = create_scraper(browser="chrome")
-        return str(anti_captcha.get(url).json()[0]["cat_id"])
+        res = anti_captcha.get(url).json()
+        if res:
+            return str(res[0]["cat_id"])
+        else:
+            # No category returned
+            return None
 
     def searchFor(self, query, autoCatgory=True):
         self._payload["filters"]["keywords"]["text"] = query
         if autoCatgory:
-            self._payload["filters"]["category"]["id"] = str(self._get_category(query))
+            category = self._get_category(query)
+            if category:
+                self._payload["filters"]["category"]["id"] = str(category)
 
     def setCategory(self, query):
         self._payload["filters"]["category"]["id"] = self._get_category(query)
