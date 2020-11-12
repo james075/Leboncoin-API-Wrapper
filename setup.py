@@ -2,6 +2,7 @@ from setuptools import setup
 
 setup(
     name='leboncoin-api-wrapper',
+    url="https://github.com/Shinyhero36/Leboncoin-API-Wrapper",
     version='0.1',
     license='MIT',
     install_requires=[
