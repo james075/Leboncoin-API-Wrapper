@@ -1,9 +1,19 @@
+# Python cache
 __pycache__
-/.idea
-keys.py
-.coverage
-/*.egg-info/
+.pytest_cache
 *.pyc
 .cache
-.eggs
 .pytest_cache
+
+# Idea project
+/.idea
+
+
+# Python build
+/*.egg-info/
+.eggs
+
+# Others
+.coverage
+keys.py
+
