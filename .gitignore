@@ -1,10 +1,3 @@
-# Python cache
-__pycache__
-.pytest_cache
-*.pyc
-.cache
-.pytest_cache
-
 # Idea project
 /.idea
 
@@ -18,4 +11,3 @@ __pycache__
 # Others
 .coverage
 keys.py
-
