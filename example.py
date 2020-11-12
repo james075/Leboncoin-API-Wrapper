@@ -1,7 +1,6 @@
-from Leboncoin.Leboncoin import  Leboncoin as LBC
+from leboncoin_api_wrapper import Leboncoin
 
-
-lbc = LBC()
+lbc = Leboncoin()
 lbc.searchFor("iphone", True)
 lbc.setLimit(10)
 lbc.maxPrice(2000)
