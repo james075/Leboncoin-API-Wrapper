@@ -1,11 +1,13 @@
-__pycache__
+# Idea project
 /.idea
-keys.py
-.coverage
+
+
+# Python build
 /*.egg-info/
-*.pyc
-.cache
 .eggs
-.pytest_cache
-/dist
-/build
+/build/
+/dist/
+
+# Others
+.coverage
+keys.py
