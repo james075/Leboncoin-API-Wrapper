@@ -9,5 +9,7 @@ setup(
         'cloudscraper >= 1.2.48',
         'pydantic >= 1.7.2',
     ],
+    setup_requires=['setuptools_scm'],  # Also include Ressources files
+    include_package_data=True,
     packages=['leboncoin_api_wrapper'],
 )
