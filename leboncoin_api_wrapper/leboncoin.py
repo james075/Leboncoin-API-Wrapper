@@ -101,6 +101,9 @@ class Leboncoin:
     def maxPrice(self, price):
         self._payload["filters"]["ranges"]["price"]["max"] = int(price)
 
+    def minPrice(self, price):
+        self._payload["filters"]["ranges"]["price"]["min"] = int(price)
+
     def setRegion(self, region_name):
         for region in self.region_data:
             if region["channel"] == region_name:
