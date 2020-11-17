@@ -126,6 +126,7 @@ class Leboncoin:
         anti_captcha = create_scraper(browser="chrome")
         res = anti_captcha.get(url).json()
         if res:
+            assert isinstance(res, List), f"Unexpected answer received from API: {res!r}"
             return str(res[0]["cat_id"])
         else:
             # No category returned
