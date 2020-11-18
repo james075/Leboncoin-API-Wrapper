@@ -135,9 +135,9 @@ class Leboncoin:
             # No category returned
             return None
 
-    def searchFor(self, query, autoCatgory=True):
+    def searchFor(self, query, autoCategory=False):
         self._payload["filters"]["keywords"]["text"] = query
-        if autoCatgory:
+        if autoCategory:
             category = self._get_category(query)
             if category:
                 self._payload["filters"]["category"]["id"] = str(category)
