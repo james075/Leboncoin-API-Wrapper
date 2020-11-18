@@ -1,12 +1,4 @@
 # Leboncoin API Wrapper
-[![Build Status](https://travis-ci.com/Shinyhero36/leboncoin-python-api-wrapper.svg?token=gYFzK1AozWjEsD9nL4UH&branch=master)](https://travis-ci.com/Shinyhero36/leboncoin-python-api-wrapper)
-![Coverage Badge](coverage.svg)
-[![GitHub issues](https://img.shields.io/github/issues/Shinyhero36/LeboncoinApiWraper)](https://github.com/Shinyhero36/LeboncoinApiWraper/issues)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Shinyhero36/LeboncoinApiWraper)
-
-[![Build Status](https://img.shields.io/github/forks/Shinyhero36/LeboncoinApiWraper.svg)](https://github.com/Shinyhero36/LeboncoinApiWraper)
-[![Build Status](https://img.shields.io/github/stars/Shinyhero36/LeboncoinApiWraper.svg)](https://github.com/Shinyhero36/LeboncoinApiWraper)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Shinyhero36/LeboncoinApiWraper)
 
 Allow easy acces to leboncoin api using python
 
